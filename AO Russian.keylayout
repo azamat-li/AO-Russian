@@ -1,8 +1,8 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
 <!--Created by Ukelele version 339 on 1442-05-24 at 05:08 (GMT+3)-->
-<!--Last edited by Ukelele version 339 on 1442-05-26 at 00:04 (GMT+3)-->
-<keyboard group="126" id="-20714" name="AO Russian" maxout="1">
+<!--Last edited by Ukelele version 339 on 1442-05-26 at 20:56 (GMT+3)-->
+<keyboard group="126" id="-13601" name="AOEU Russian" maxout="1">
     <layouts>
         <layout first="0" last="17" mapSet="ANSI" modifiers="Modifiers"/>
         <layout first="18" last="18" mapSet="JIS" modifiers="Modifiers"/>
@@ -64,7 +64,7 @@
             <key code="27" output="]"/>
             <key code="28" output="}"/>
             <key code="29" output="!"/>
-            <key code="30" action="&#x001B;"/>
+            <key code="30" output="ч"/>
             <key code="31" output="р"/>
             <key code="32" output="г"/>
             <key code="33" action="/"/>
@@ -170,7 +170,7 @@
             <key code="27" output="9"/>
             <key code="28" output="1"/>
             <key code="29" output="7"/>
-            <key code="30" output="&#x001B;"/>
+            <key code="30" output="Ч"/>
             <key code="31" output="Р"/>
             <key code="32" output="Г"/>
             <key code="33" output="?"/>
@@ -381,7 +381,7 @@
             <key code="27" output="9"/>
             <key code="28" output="1"/>
             <key code="29" output="7"/>
-            <key code="30" output="&#x001B;"/>
+            <key code="30" output="Ч"/>
             <key code="31" output="Р"/>
             <key code="32" output="Г"/>
             <key code="33" output="?"/>
@@ -581,6 +581,9 @@
     </keyMapSet>
     <actions>
         <action id="&#x001B;">
+            <when state="none" next="Dead Key State 0"/>
+        </action>
+        <action id="&#x001B; 1">
             <when state="none" next="Dead Key State 0"/>
         </action>
         <action id="&#x0026;">
