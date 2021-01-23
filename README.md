@@ -7,5 +7,8 @@ is as ordinary .dmg package
 include
 - More vowels by the left hand
 - Bracket, arithmetic operators, etc prioritized
+- Russian language
+- Bashkir & Tatar languages letters entering using <kbd>Right Alt</kbd>
+
 
 
