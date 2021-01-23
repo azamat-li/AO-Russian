@@ -1,5 +1,8 @@
 # AOEU Russian keyboard layout
 
+## May install on
+mac OS
+
 ## Installation
 is as ordinary .dmg package
 
