@@ -1,0 +1,103 @@
+forge@amiable-fog-1612118577869-s-1vcpu-1gb-lon1-01:~/stolyaroff.smartheadteacher.com$ php artisan make:livewire meter-cube-fast-calc
+ COMPONENT CREATED  🤙
+
+CLASS: app/Http/Livewire/MeterCubeFastCalc.php
+VIEW:  resources/views/livewire/meter-cube-fast-calc.blade.php
+forge@amiable-fog-1612118577869-s-1vcpu-1gb-lon1-01:~/stolyaroff.smartheadteacher.com$ vim .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+                <div class="title">
+                         <h2 class="p-2 m-3">Вычислитель кубометра </h2>
+                </div>
+
+                <!--Type chooser-->
+                <div class="bg-gray-200 rounded-lg">
+                        <div class="flex flex-col items-center justify-center">
+                                        <div class="flex flex-col">
+                                                        <label class="inline-flex items-center mt-3">
+                                                                        <input type="radio" wire:model="shape" id="circular" name="shape" value="circular" class="form-radio h-5 w-5 text-blue-600" checked><span class=" p-1 rounded text-gray-700">Кругляк</span>
+                                                        </label>
+                                                        <label class="inline-flex items-center mt-3">
+                                                                        <input  type="radio" wire:model="shape" id="plane" value="plane" name="shape" placeholder="тип дерева" class="form-radio h-5 w-5 text-red-600"><span class=" p-1 rounded text-gray-700">Доска</span>
+                                                        </label>
+                                        </div>
+                        </div>
+      <div class="flex flex-col items-center justify-center">
+                                        <div class="flex flex-row">
+                                        @foreach (['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'] as $cnt)
+                                                        <label class="inline-flex items-center mt-3">
+                                                                        <input type="radio" wire:model="count" id="count" name="count" value="{{$cnt}}" class="form-radio h-5 w-5 text-blue-600" checked><span class=" p-1 rounded text-gray-700">{{ $cnt }}</span>
+                                                        </label>
+                                        @endforeach
+                                        </div>
+                        </div>
+                </div>
+
+                <!--Text inputs-->
+                <div class="mt-2  flex flex-center items-center justify-center">
+                        <input type="text" wire:model="length" alt="длина" placeholder="длина в метрах" class="rounded block  m-2">
+                        <input type="text" wire:model="smWidthInMm" alt="ширина / диаметр в миллиметрах" placeholder="ширина / диаметр в мм" class="rounded  block  m-2">
+                        @if ($shape === 'plane') <input type="text" wire:model="thickness" alt="толщина доски" placeholder="толщина доски в мм" class="rounded  block m-2"> @endif
+                </div>
+
+                <!--Launch button-->
+                <div class="p-2 bg-gray-200 rounded mt-2">
+                        @if ($shape === 'circular') 
+                                <button wire:click="calculateCubes()">
+                                        Посчитать кубы для кругляка
+                                </button>
+                        @endif
+                        @if ($shape === 'plane') 
+                                <button wire:click="calculateCubes()">
+                                        Посчитать кубы для доски
+                                </button>
+                        @endif
+                </div>
+
+3 fewer lines                                                                                                                                                              1,1           Top
